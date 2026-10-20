@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Diwali 2026 ad spend</title>
+<style>
+  @page { size: 1080px 1350px; margin: 0; }
+  :root {
+    --bg: #1b1440;
+    --bg-2: #241b52;
+    --ink: #f5efe6;
+    --ink-2: #c9c2dd;
+    --ink-3: #9a93b8;
+    --accent: #cf7d1a;      /* focus series: validated L 0.48-0.67, >=3:1 on --bg */
+    --context: #7c76a3;     /* deliberately neutral context bars */
+    --rule: #3a3070;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg); }
+  body { font-family: "Inter", "DejaVu Sans", sans-serif; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  section {
+    width: 1080px; height: 1350px; padding: 96px 96px 170px;
+    position: relative; overflow: hidden; background: var(--bg);
+    page-break-after: always; break-after: page;
+    display: flex; flex-direction: column;
+  }
+  section:last-child { page-break-after: auto; break-after: auto; }
+  .num { position: absolute; top: 72px; right: 96px; font-size: 28px; font-weight: 600; color: var(--ink-3); letter-spacing: .04em; }
+  .handle { position: absolute; bottom: 56px; left: 96px; font-size: 28px; color: var(--ink-3); }
+  .src { position: absolute; bottom: 104px; left: 96px; right: 96px; font-size: 28px; color: var(--ink-3); }
+  .kicker { font-size: 30px; font-weight: 600; color: var(--accent); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 36px; }
+  h1 { font-family: "Inter Display", "Inter", sans-serif; font-size: 132px; line-height: 1.0; font-weight: 800; letter-spacing: -.02em; }
+  h2 { font-family: "Inter Display", "Inter", sans-serif; font-size: 88px; line-height: 1.05; font-weight: 800; letter-spacing: -.015em; margin-bottom: 48px; }
+  p.body { font-size: 40px; line-height: 1.35; color: var(--ink-2); max-width: 860px; }
+  p.lens { font-size: 36px; line-height: 1.35; color: var(--ink); max-width: 880px; border-left: 6px solid var(--accent); padding-left: 28px; margin-top: auto; }
+  p.lens b { color: var(--accent); font-weight: 700; }
+  .hero { font-family: "Inter Display", "Inter", sans-serif; font-size: 220px; font-weight: 800; line-height: 1; letter-spacing: -.03em; margin: 24px 0 16px; }
+  .hero-sub { font-size: 40px; color: var(--ink-2); margin-bottom: 40px; }
+  .spark { display: inline-block; width: 120px; height: 10px; background: var(--accent); border-radius: 5px; margin-bottom: 40px; }
+
+  /* charts */
+  .bars { display: flex; flex-direction: column; gap: 28px; margin: 16px 0 48px; }
+  .bar-row { display: grid; grid-template-columns: 150px 1fr; align-items: center; gap: 24px; }
+  .bar-row .lbl { font-size: 32px; color: var(--ink-2); font-weight: 600; }
+  .track { height: 88px; position: relative; }
+  .fill { height: 100%; border-radius: 0 6px 6px 0; display: flex; align-items: center; justify-content: flex-end; padding-right: 22px; font-size: 32px; font-weight: 700; color: var(--bg); }
+  .fill.ctx { background: var(--context); }
+  .fill.acc { background: var(--accent); }
+  .ext { position: absolute; top: 0; height: 100%; border-radius: 0 6px 6px 0;
+         background: repeating-linear-gradient(135deg, var(--accent) 0 8px, transparent 8px 16px); opacity: .9; }
+  .val-out { position: absolute; top: 50%; transform: translateY(-50%); font-size: 32px; font-weight: 700; color: var(--ink); white-space: nowrap; }
+
+  .split { display: flex; height: 120px; gap: 4px; margin: 24px 0 20px; }
+  .split > div { display: flex; align-items: center; padding: 0 26px; font-size: 34px; font-weight: 700; }
+  .split .a { background: var(--accent); color: var(--bg); border-radius: 6px 0 0 6px; }
+  .split .c { background: var(--context); color: var(--bg); border-radius: 0 6px 6px 0; justify-content: flex-end; }
+  .split-key { display: flex; justify-content: space-between; font-size: 30px; color: var(--ink-2); margin-bottom: 48px; }
+
+  .cols { display: flex; align-items: flex-end; gap: 36px; height: 520px; margin: 8px 0 24px; padding-bottom: 0; border-bottom: 2px solid var(--rule); }
+  .col { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; }
+  .col .v { font-size: 32px; font-weight: 700; margin-bottom: 14px; }
+  .col .b { width: 100%; border-radius: 6px 6px 0 0; }
+  .col-lbls { display: flex; gap: 36px; margin-bottom: 40px; }
+  .col-lbls div { flex: 1; text-align: center; font-size: 30px; color: var(--ink-2); font-weight: 600; }
+
+  .dates { display: flex; gap: 24px; margin: 8px 0 48px; }
+  .date { flex: 1; background: var(--bg-2); border-radius: 12px; padding: 28px 24px; text-align: center; }
+  .date .d { font-family: "Inter Display", "Inter", sans-serif; font-size: 64px; font-weight: 800; }
+  .date .n { font-size: 28px; color: var(--ink-2); margin-top: 6px; }
+  .date.main { outline: 4px solid var(--accent); }
+
+  ol.recap { list-style: none; counter-reset: r; display: flex; flex-direction: column; gap: 26px; margin-top: 8px; }
+  ol.recap li { counter-increment: r; display: grid; grid-template-columns: 64px 1fr; font-size: 36px; line-height: 1.3; color: var(--ink); }
+  ol.recap li::before { content: counter(r); font-weight: 800; color: var(--accent); font-size: 40px; }
+  ol.recap li span { color: var(--ink-2); }
+
+  .cover { justify-content: center; background:
+      radial-gradient(circle at 85% 12%, rgba(207,125,26,.28) 0 180px, transparent 181px),
+      radial-gradient(circle at 92% 30%, rgba(207,125,26,.14) 0 90px, transparent 91px),
+      var(--bg); }
+  .cover h1 { font-size: 150px; margin-bottom: 56px; }
+  .cover h1 em { font-style: normal; color: var(--accent); }
+  .cover p.body { font-size: 44px; }
+  .cta { justify-content: center; }
+  .cta h2 { font-size: 96px; }
+</style>
+</head>
+<body>
+
+<!-- 1 COVER -->
+<section class="cover">
+  <div class="num">1/11</div>
+  <div class="kicker">Diwali 2026</div>
+  <h1>Follow the <em>money.</em></h1>
+  <p class="body">₹60,000 crore of festive ad spend, read through what I'm learning in Advertising &amp; Sales Promotion at XLRI.</p>
+  <div class="handle">Anuj Singhvi · XLRI Jamshedpur</div>
+</section>
+
+<!-- 2 STAKE -->
+<section>
+  <div class="num">2/11</div>
+  <div class="kicker">The runway</div>
+  <h2>Diwali came late this year.</h2>
+  <div class="dates">
+    <div class="date"><div class="d">6 Nov</div><div class="n">Dhanteras</div></div>
+    <div class="date main"><div class="d">8 Nov</div><div class="n">Diwali</div></div>
+    <div class="date"><div class="d">10 Nov</div><div class="n">Bhai Dooj</div></div>
+  </div>
+  <p class="body">About three weeks later than last year. Brands got a longer runway, and they're using it.</p>
+  <div class="handle">Anuj Singhvi · XLRI Jamshedpur</div>
+</section>
+
+<!-- 3 SIZE -->
+<section>
+  <div class="num">3/11</div>
+  <div class="kicker">The pot</div>
+  <h2>The pot grew 13-17%.</h2>
+  <div class="bars">
+    <div class="bar-row"><div class="lbl">2025</div>
+      <div class="track"><div class="fill ctx" style="width:59%">₹53,000 cr</div></div></div>
+    <div class="bar-row"><div class="lbl">2026</div>
+      <div class="track">
+        <div class="fill acc" style="width:66.8%"></div>
+        <div class="ext" style="left:66.8%; width:2.2%"></div>
+        <div class="val-out" style="left:71.5%">₹60-62k cr</div>
+      </div></div>
+  </div>
+  <p class="body">Festive ad spend, India. 2026 is a forecast; the striped end is the top of the range.</p>
+  <div class="handle">Anuj Singhvi · XLRI Jamshedpur</div>
+  <div class="src">Source: Datum Intelligence forecast</div>
+</section>
+
+<!-- 4 DIGITAL -->
+<section>
+  <div class="num">4/11</div>
+  <div class="kicker">Bet 1 · Digital</div>
+  <h2>Two of every three rupees: digital.</h2>
+  <div class="split"><div class="a" style="width:67.8%">67.8%</div><div class="c" style="width:32.2%">32.2%</div></div>
+  <div class="split-key"><span>Digital</span><span>TV, print, outdoor, radio</span></div>
+  <p class="lens"><b>Class lens:</b> digital lets a brand show up at the moment of choice, not just in memory.</p>
+  <div class="handle">Anuj Singhvi · XLRI Jamshedpur</div>
+  <div class="src">Source: Datum Intelligence forecast</div>
+</section>
+
+<!-- 5 CREATORS -->
+<section>
+  <div class="num">5/11</div>
+  <div class="kicker">Bet 2 · Creators</div>
+  <h2>7,200 brands, one feed.</h2>
+  <div class="cols">
+    <div class="col"><div class="v">4,500</div><div class="b" style="height:62.5%; background:var(--context)"></div></div>
+    <div class="col"><div class="v">5,200</div><div class="b" style="height:72.2%; background:var(--context)"></div></div>
+    <div class="col"><div class="v">6,000</div><div class="b" style="height:83.3%; background:var(--context)"></div></div>
+    <div class="col"><div class="v">7,200</div><div class="b" style="height:100%; background:var(--accent)"></div></div>
+  </div>
+  <div class="col-lbls"><div>2023</div><div>2024</div><div>2025</div><div>2026*</div></div>
+  <p class="lens"><b>Class lens:</b> creators work because we copy people we trust. Seven thousand brands in one week is noise.</p>
+  <div class="handle">Anuj Singhvi · XLRI Jamshedpur</div>
+  <div class="src">Brands on festive creator campaigns. *Forecast. Qoruz</div>
+</section>
+
+<!-- 6 QUICK COMMERCE -->
+<section>
+  <div class="num">6/11</div>
+  <div class="kicker">Bet 3 · Quick commerce</div>
+  <div class="hero">+50%</div>
+  <div class="hero-sub">₹2,200 crore this festive season</div>
+  <p class="lens"><b>Class lens:</b> purchase facilitation, the fifth communication effect. The ad sits one tap from the cart.</p>
+  <div class="handle">Anuj Singhvi · XLRI Jamshedpur</div>
+  <div class="src">Source: Datum Intelligence forecast</div>
+</section>
+
+<!-- 7 OOH -->
+<section>
+  <div class="num">7/11</div>
+  <div class="kicker">Bet 4 · Outdoor</div>
+  <h2>Billboards: sold out.</h2>
+  <div class="hero" style="font-size:180px">15-20%</div>
+  <div class="hero-sub">expected outdoor growth, premium sites effectively fully booked</div>
+  <p class="lens"><b>Class lens:</b> media is bought months ahead. The brands that planned early own the best walls.</p>
+  <div class="handle">Anuj Singhvi · XLRI Jamshedpur</div>
+  <div class="src">Source: OOH operators via Storyboard18</div>
+</section>
+
+<!-- 8 BUDGETS -->
+<section>
+  <div class="num">8/11</div>
+  <div class="kicker">Bet 5 · Flexibility</div>
+  <h2>Budgets on a short leash.</h2>
+  <p class="body">Brands aren't locking full festive budgets months in advance. They want proof first.</p>
+  <p class="lens"><b>Class lens:</b> the same shift agency pay made, from commission to performance.</p>
+  <div class="handle">Anuj Singhvi · XLRI Jamshedpur</div>
+  <div class="src">Source: Bestmediainfo</div>
+</section>
+
+<!-- 9 THE TURN -->
+<section>
+  <div class="num">9/11</div>
+  <div class="kicker">My read</div>
+  <h2>Diwali doesn't build brands. It cashes them in.</h2>
+  <div class="split"><div class="c" style="width:60%; border-radius:6px 0 0 6px; justify-content:flex-start">60% brand</div><div class="a" style="width:40%; border-radius:0 6px 6px 0">40% activation</div></div>
+  <div class="split-key"><span>Builds memory, all year</span><span>Festive spend is mostly this</span></div>
+  <p class="lens"><b>Binet &amp; Field:</b> activation runs on memory the other 11 months built.</p>
+  <div class="handle">Anuj Singhvi · XLRI Jamshedpur</div>
+  <div class="src">Rule of thumb: Binet &amp; Field, IPA</div>
+</section>
+
+<!-- 10 RECAP -->
+<section>
+  <div class="num">10/11</div>
+  <div class="kicker">Save this</div>
+  <h2>Diwali 2026 in six numbers</h2>
+  <ol class="recap">
+    <li><div>₹60-62k crore pot <span>· up 13-17%</span></div></li>
+    <li><div>Digital takes 67.8% <span>· win at the moment of choice</span></div></li>
+    <li><div>7,200 brands on creators <span>· trust, then noise</span></div></li>
+    <li><div>Quick commerce up 50% <span>· one tap from the cart</span></div></li>
+    <li><div>Outdoor sold out <span>· early planners won</span></div></li>
+    <li><div>Budgets stay flexible <span>· pay for proof</span></div></li>
+  </ol>
+  <p class="lens"><b>The point:</b> festive spend cashes in a brand. It rarely builds one.</p>
+  <div class="handle">Anuj Singhvi · XLRI Jamshedpur</div>
+</section>
+
+<!-- 11 CTA -->
+<section class="cta">
+  <div class="num">11/11</div>
+  <div class="spark"></div>
+  <h2>Which Diwali 2026 ad will you still remember in January?</h2>
+  <p class="body">Tell me in the comments.</p>
+  <div class="handle">Anuj Singhvi · XLRI Jamshedpur</div>
+</section>
+
+</body>
+</html>
