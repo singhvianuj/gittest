@@ -1,6 +1,6 @@
 # Advertising & Sales Promotion: topic bank
 
-Source: course decks Ch 3-6. Concepts ranked by post potential for a marketing/strategy hiring audience.
+Source: course decks Ch 3-7. Concepts ranked by post potential for a marketing/strategy hiring audience.
 Each needs a live news peg (filled fortnightly) before it becomes a Tuesday post.
 
 Rating: A = strong standalone post, B = good, C = supporting idea / combine with another.
@@ -52,8 +52,24 @@ Rating: A = strong standalone post, B = good, C = supporting idea / combine with
 | 6.7 | Positioning statement format + X-YZ / a-b-e | B | Carousel: write the statement for a brand in the news |
 | 6.8 | Sales promotion must not contradict price-quality position | B | Festive discounting peg; bridges to Sales Promotion chapters |
 
+## Ch 7 - The Creative Idea
+| # | Concept | Rating | Post angle |
+|---|---|---|---|
+| 7.1 | Theory of random creativity: quantity of ideas is controllable, evaluation is the skill; brief multiple independent teams | A | Contrarian: "be more creative" is not a method. Applies beyond ads to strategy teams |
+| 7.2 | I-G-I brainstorming (individual, group, individual) beats group brainstorming | A | Teach: run your next team brainstorm this way; works in any function |
+| 7.3 | Creative strategy (client) vs creative execution (agency); most conflict comes from mixing them | A | "Make it more colourful" is a client doing the agency's job |
+| 7.4 | Long-term creative equity: knowing when NOT to change the big idea | A | Peg to a brand that just dropped a long-running campaign; was it worn out or just boring the marketing team? |
+| 7.5 | Five-question creative evaluation, criteria set BEFORE seeing work; "is the brand the hero?" test | A | Teach: remove the brand from a viral ad, does it still work? |
+| 7.6 | Design by committee erodes the idea; creative authority sits with the brand manager | B | Opinion on seniority-driven creative decisions in Indian companies |
+| 7.7 | RAM-Conveyor: remote association conveyed to the brand attribute | B | Break down a current ad with the model |
+| 7.8 | Creative idea is NOT a slogan, technique, character or demo | B | Combine with 7.7 |
+| 7.9 | Awards vs effectiveness ("scam ads", Effies vs Cannes) | B | Peg to awards season |
+| 7.10 | The creative brief: one objective, benefit not feature, minimal mandatories | B | Carousel: anatomy of a one-page brief |
+| 7.11 | Cultural truth / sensitivity in Indian advertising | B | Peg to any ad backlash in the news |
+| 7.12 | Digital: brand in first 3 seconds; what does not change | C | Combine with 7.5 |
+
 ## Carousel candidates
-FCB grid (5.1), perceptual map (6.6), five buyer groups (3.1), positioning statement walkthrough (6.7).
+FCB grid (5.1), perceptual map (6.6), five buyer groups (3.1), positioning statement walkthrough (6.7), creative brief anatomy (7.10), five-question creative evaluation (7.5).
 
 ## Fact-check before posting
 Several India examples in the slides need verifying against a primary source before they go under Anuj's name:
@@ -62,4 +78,7 @@ Several India examples in the slides need verifying against a primary source bef
 - Lowe Lintas, FCB Ulka, Dentsu India described as "independent": they are network-affiliated.
 - Pepsi "Kala Khatta" positioning failure: unverified.
 - Any specific market-size or growth figure (PR industry, SEM market, programmatic spend).
+- Cadbury "cricket field" idea "came from the fourth team to present": slide says "reportedly"; unverified.
+- R. Balakrishnan is placed at JWT in Ch 3 and at McCann in Ch 7; the slides contradict each other.
+- Pond's "Do the Rex" by Wieden+Kennedy Mumbai, 2M views in 48 hours: unverified.
 Rule: use the framework from class; cite current numbers only from a source we can link in the first comment.
