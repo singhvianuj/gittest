@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>India entry modes 2026</title>
+<style>
+  @page { size: 1080px 1350px; margin: 0; }
+  :root {
+    --bg: #1b1440;
+    --bg-2: #241b52;
+    --ink: #f5efe6;
+    --ink-2: #c9c2dd;
+    --ink-3: #9a93b8;
+    --accent: #cf7d1a;      /* focus series: validated L 0.48-0.67, >=3:1 on --bg */
+    --context: #7c76a3;     /* deliberately neutral context bars */
+    --rule: #3a3070;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg); }
+  body { font-family: "Inter", "DejaVu Sans", sans-serif; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  section {
+    width: 1080px; height: 1350px; padding: 96px 96px 170px;
+    position: relative; overflow: hidden; background: var(--bg);
+    page-break-after: always; break-after: page;
+    display: flex; flex-direction: column;
+  }
+  section:last-child { page-break-after: auto; break-after: auto; }
+  .num { position: absolute; top: 72px; right: 96px; font-size: 28px; font-weight: 600; color: var(--ink-3); letter-spacing: .04em; }
+  .handle { position: absolute; bottom: 56px; left: 96px; font-size: 28px; color: var(--ink-3); }
+  .src { position: absolute; bottom: 104px; left: 96px; right: 96px; font-size: 28px; color: var(--ink-3); }
+  .kicker { font-size: 30px; font-weight: 600; color: var(--accent); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 36px; }
+  h1 { font-family: "Inter Display", "Inter", sans-serif; font-size: 132px; line-height: 1.0; font-weight: 800; letter-spacing: -.02em; }
+  h2 { font-family: "Inter Display", "Inter", sans-serif; font-size: 88px; line-height: 1.05; font-weight: 800; letter-spacing: -.015em; margin-bottom: 48px; }
+  p.body { font-size: 40px; line-height: 1.35; color: var(--ink-2); max-width: 860px; }
+  p.lens { font-size: 36px; line-height: 1.35; color: var(--ink); max-width: 880px; border-left: 6px solid var(--accent); padding-left: 28px; margin-top: auto; }
+  p.lens b { color: var(--accent); font-weight: 700; }
+  .hero { font-family: "Inter Display", "Inter", sans-serif; font-size: 220px; font-weight: 800; line-height: 1; letter-spacing: -.03em; margin: 24px 0 16px; }
+  .hero-sub { font-size: 40px; color: var(--ink-2); margin-bottom: 40px; }
+  .spark { display: inline-block; width: 120px; height: 10px; background: var(--accent); border-radius: 5px; margin-bottom: 40px; }
+
+  /* charts */
+  .bars { display: flex; flex-direction: column; gap: 28px; margin: 16px 0 48px; }
+  .bar-row { display: grid; grid-template-columns: 150px 1fr; align-items: center; gap: 24px; }
+  .bar-row .lbl { font-size: 32px; color: var(--ink-2); font-weight: 600; }
+  .track { height: 88px; position: relative; }
+  .fill { height: 100%; border-radius: 0 6px 6px 0; display: flex; align-items: center; justify-content: flex-end; padding-right: 22px; font-size: 32px; font-weight: 700; color: var(--bg); }
+  .fill.ctx { background: var(--context); }
+  .fill.acc { background: var(--accent); }
+  .ext { position: absolute; top: 0; height: 100%; border-radius: 0 6px 6px 0;
+         background: repeating-linear-gradient(135deg, var(--accent) 0 8px, transparent 8px 16px); opacity: .9; }
+  .val-out { position: absolute; top: 50%; transform: translateY(-50%); font-size: 32px; font-weight: 700; color: var(--ink); white-space: nowrap; }
+
+  .split { display: flex; height: 120px; gap: 4px; margin: 24px 0 20px; }
+  .split > div { display: flex; align-items: center; padding: 0 26px; font-size: 34px; font-weight: 700; }
+  .split .a { background: var(--accent); color: var(--bg); border-radius: 6px 0 0 6px; }
+  .split .c { background: var(--context); color: var(--bg); border-radius: 0 6px 6px 0; justify-content: flex-end; }
+  .split-key { display: flex; justify-content: space-between; font-size: 30px; color: var(--ink-2); margin-bottom: 48px; }
+
+  .cols { display: flex; align-items: flex-end; gap: 36px; height: 520px; margin: 8px 0 24px; padding-bottom: 0; border-bottom: 2px solid var(--rule); }
+  .col { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; }
+  .col .v { font-size: 32px; font-weight: 700; margin-bottom: 14px; }
+  .col .b { width: 100%; border-radius: 6px 6px 0 0; }
+  .col-lbls { display: flex; gap: 36px; margin-bottom: 40px; }
+  .col-lbls div { flex: 1; text-align: center; font-size: 30px; color: var(--ink-2); font-weight: 600; }
+
+  .dates { display: flex; gap: 24px; margin: 8px 0 48px; }
+  .date { flex: 1; background: var(--bg-2); border-radius: 12px; padding: 28px 24px; text-align: center; }
+  .date .d { font-family: "Inter Display", "Inter", sans-serif; font-size: 64px; font-weight: 800; }
+  .date .n { font-size: 28px; color: var(--ink-2); margin-top: 6px; }
+  .date.main { outline: 4px solid var(--accent); }
+
+  ol.recap { list-style: none; counter-reset: r; display: flex; flex-direction: column; gap: 26px; margin-top: 8px; }
+  ol.recap li { counter-increment: r; display: grid; grid-template-columns: 64px 1fr; font-size: 36px; line-height: 1.3; color: var(--ink); }
+  ol.recap li::before { content: counter(r); font-weight: 800; color: var(--accent); font-size: 40px; }
+  ol.recap li span { color: var(--ink-2); }
+
+  .cover { justify-content: center; background:
+      radial-gradient(circle at 85% 12%, rgba(207,125,26,.28) 0 180px, transparent 181px),
+      radial-gradient(circle at 92% 30%, rgba(207,125,26,.14) 0 90px, transparent 91px),
+      var(--bg); }
+  .cover h1 { font-size: 150px; margin-bottom: 56px; }
+  .cover h1 em { font-style: normal; color: var(--accent); }
+  .cover p.body { font-size: 44px; }
+  .cta { justify-content: center; }
+  .cta h2 { font-size: 96px; }
+
+  .ladder { display:flex; align-items:flex-end; gap:20px; height:var(--lh,300px); border-bottom:2px solid var(--rule); margin:8px 0 18px; }
+  .rung { flex:1; background:var(--context); border-radius:6px 6px 0 0; opacity:.45; position:relative; }
+  .rung.on { background:var(--accent); opacity:1; }
+  .rung.x { background:repeating-linear-gradient(135deg, var(--accent) 0 10px, transparent 10px 20px); opacity:1; outline:3px solid var(--accent); outline-offset:-3px; }
+  .rung-lbls { display:flex; gap:20px; margin-bottom:12px; }
+  .rung-lbls div { flex:1; text-align:center; font-size:28px; color:var(--ink-3); font-weight:600; line-height:1.2; }
+  .rung-lbls div.on { color:var(--ink); }
+  .axis { font-size:28px; color:var(--ink-3); margin-bottom:40px; }
+  .axis b { color:var(--ink-2); }
+  .facts { list-style:none; display:flex; flex-direction:column; gap:18px; margin:8px 0 0; }
+  .facts li { font-size:36px; line-height:1.3; color:var(--ink-2); padding-left:34px; position:relative; }
+  .facts li::before { content:""; position:absolute; left:0; top:18px; width:14px; height:14px; border-radius:50%; background:var(--accent); }
+  table.recap { width:100%; border-collapse:collapse; margin-top:8px; }
+  table.recap td { font-size:34px; padding:20px 0; border-bottom:2px solid var(--rule); vertical-align:top; }
+  table.recap td:first-child { color:var(--ink-2); width:52%; }
+  table.recap td:last-child { font-weight:700; }
+  table.recap tr.warn td:last-child { color:var(--accent); }
+</style>
+</head>
+<body>
+<section class="cover"><div class="num">1/11</div><div class="kicker">India · 2026</div><h1>Five brands. Five ways <em>in.</em></h1><p class="body">How global brands entered India this year, mapped to the entry-mode slides from my Global Marketing course at XLRI.</p><div class="handle">Anuj Singhvi · XLRI Jamshedpur</div></section>
+<section class=""><div class="num">2/11</div><div class="kicker">The framework</div><h2>Every entry mode trades control for risk.</h2><div class="ladder" style="--lh:420px"><div class="rung" style="height:25%"></div><div class="rung" style="height:50%"></div><div class="rung" style="height:75%"></div><div class="rung" style="height:100%"></div></div><div class="rung-lbls"><div class="">Licensing</div><div class="">Franchise</div><div class="">Partner runs it</div><div class="">Own it</div></div><div class="axis">Low → high: <b>money committed, risk taken, control of the customer experience</b></div><div class="src">Global Marketing, XLRI: market entry and expansion</div><div class="handle">Anuj Singhvi · XLRI Jamshedpur</div></section>
+<section class=""><div class="num">3/11</div><div class="kicker">Rung 1 · Licensing</div><h2>Off-White</h2><div class="ladder" style="--lh:200px"><div class="rung on" style="height:25%"></div><div class="rung" style="height:50%"></div><div class="rung" style="height:75%"></div><div class="rung" style="height:100%"></div></div><div class="rung-lbls"><div class="on">Licensing</div><div class="">Franchise</div><div class="">Partner runs it</div><div class="">Own it</div></div><ul class="facts"><li>Partner: Brand Concepts</li><li>First store: Bengaluru, April 2026</li><li>Five flagships planned in three years</li></ul><p class="lens"><b>Class lens:</b> test the market cheaply. Someone else runs your shop floor.</p><div class="src">Source: FashionNetwork, Retail4Growth</div><div class="handle">Anuj Singhvi · XLRI Jamshedpur</div></section>
+<section class=""><div class="num">4/11</div><div class="kicker">Rung 2 · Franchise</div><h2>Lululemon</h2><div class="ladder" style="--lh:200px"><div class="rung" style="height:25%"></div><div class="rung on" style="height:50%"></div><div class="rung" style="height:75%"></div><div class="rung" style="height:100%"></div></div><div class="rung-lbls"><div class="">Licensing</div><div class="on">Franchise</div><div class="">Partner runs it</div><div class="">Own it</div></div><ul class="facts"><li>Partner: Tata CLiQ</li><li>First store: DLF Promenade, Delhi</li><li>Online on Tata CLiQ Luxury and Fashion</li></ul><p class="lens"><b>Class lens:</b> a proven concept, run by a partner. The catch is picking and training that partner.</p><div class="src">Source: afaqs, The Retail Bulletin</div><div class="handle">Anuj Singhvi · XLRI Jamshedpur</div></section>
+<section class=""><div class="num">5/11</div><div class="kicker">Rung 3 · Partner runs it</div><h2>SKIMS</h2><div class="ladder" style="--lh:200px"><div class="rung" style="height:25%"></div><div class="rung" style="height:50%"></div><div class="rung on" style="height:75%"></div><div class="rung" style="height:100%"></div></div><div class="rung-lbls"><div class="">Licensing</div><div class="">Franchise</div><div class="on">Partner runs it</div><div class="">Own it</div></div><ul class="facts"><li>Exclusive partner: Reliance Brands</li><li>Announced August 2026</li><li>Flagships in Delhi and Mumbai, plus online</li></ul><p class="lens"><b>Class lens:</b> you're borrowing the partner's local muscle, and that's the whole point.</p><div class="src">Source: FashionUnited, Business Today</div><div class="handle">Anuj Singhvi · XLRI Jamshedpur</div></section>
+<section class=""><div class="num">6/11</div><div class="kicker">Rung 4 · Own it</div><h2>UNIQLO</h2><div class="ladder" style="--lh:200px"><div class="rung" style="height:25%"></div><div class="rung" style="height:50%"></div><div class="rung" style="height:75%"></div><div class="rung on" style="height:100%"></div></div><div class="rung-lbls"><div class="">Licensing</div><div class="">Franchise</div><div class="">Partner runs it</div><div class="on">Own it</div></div><ul class="facts"><li>Wholly owned Indian subsidiary</li><li>Jaipur opens 13 November</li><li>Its 22nd store in India</li></ul><p class="lens"><b>Class lens:</b> you control everything. You pay for everything.</p><div class="src">Source: Indian Retailer, Quartz</div><div class="handle">Anuj Singhvi · XLRI Jamshedpur</div></section>
+<section class=""><div class="num">7/11</div><div class="kicker">Rung 4 · Own it, online first</div><h2>IKEA</h2><div class="ladder" style="--lh:200px"><div class="rung" style="height:25%"></div><div class="rung" style="height:50%"></div><div class="rung" style="height:75%"></div><div class="rung on" style="height:100%"></div></div><div class="rung-lbls"><div class="">Licensing</div><div class="">Franchise</div><div class="">Partner runs it</div><div class="on">Own it</div></div><ul class="facts"><li>Over $2.2 billion planned in India</li><li>From 6 stores to about 30 by 2030</li><li>Online before stores in new cities</li></ul><p class="lens"><b>Class lens:</b> e-commerce as an entry mode. Prove demand, then build.</p><div class="src">Source: Reuters via Business Today, Domain-B</div><div class="handle">Anuj Singhvi · XLRI Jamshedpur</div></section>
+<section class=""><div class="num">8/11</div><div class="kicker">The other side</div><h2>When the partner walks away.</h2><div class="ladder" style="--lh:200px"><div class="rung" style="height:25%"></div><div class="rung x" style="height:50%"></div><div class="rung" style="height:75%"></div><div class="rung" style="height:100%"></div></div><div class="rung-lbls"><div class="">Licensing</div><div class="on">Franchise</div><div class="">Partner runs it</div><div class="">Own it</div></div><ul class="facts"><li>Jubilant won't renew Dunkin' after 31 December</li><li>27 outlets as of December 2025</li></ul><p class="lens"><b>Class lens:</b> in a franchise, your partner can end your market. It's that simple.</p><div class="src">Source: Moneylife, Storyboard18</div><div class="handle">Anuj Singhvi · XLRI Jamshedpur</div></section>
+<section class=""><div class="num">9/11</div><div class="kicker">My read</div><h2>The entry mode is a brand decision.</h2><p class="body">If the product is the brand, a partner can sell it.</p><p class="body" style="margin-top:28px">If the store is the brand, run it yourself.</p><div class="handle">Anuj Singhvi · XLRI Jamshedpur</div></section>
+<section class=""><div class="num">10/11</div><div class="kicker">Save this</div><h2>India 2026, by entry mode</h2><table class="recap"><tr><td>Licensing</td><td>Off-White</td></tr><tr><td>Franchise</td><td>Lululemon</td></tr><tr><td>Partner runs it</td><td>SKIMS</td></tr><tr><td>Own it</td><td>UNIQLO</td></tr><tr><td>Own it, online first</td><td>IKEA</td></tr><tr class="warn"><td>Partner exit</td><td>Dunkin'</td></tr></table><p class="lens"><b>The rule:</b> more control costs more, and it's worth it when the experience is the brand.</p><div class="handle">Anuj Singhvi · XLRI Jamshedpur</div></section>
+<section class="cta"><div class="num">11/11</div><div class="spark"></div><h2>Which entry mode would you pick for a global brand you love?</h2><p class="body">Name it in the comments.</p><div class="handle">Anuj Singhvi · XLRI Jamshedpur</div></section>
+</body>
+</html>
